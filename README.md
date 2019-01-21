@@ -15,4 +15,4 @@ Pseudo code:
 4. Integrating bounding box around cluster.
 5. Printout orientation and translation of the object (4x4 matrix).
 
-![Yellow box around cluster0](https://imgur.com/a/ypI1Zyo) 
+![Yellow box around cluster](https://imgur.com/a/ypI1Zyo) 
