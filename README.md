@@ -1,14 +1,17 @@
-# ISS-3D-keypoints
-Some working example of keypoint detection algorithm using Point Cloud Library (PCL).
+# Real time cluster extraction and object localization
 
-ISSKeypoint3D detects the Intrinsic Shape Signatures keypoints for a given point cloud.
-This class is based on a particular implementation made by Federico Tombari and Samuele Salti and it has been explicitly adapted to PCL.
+This is a simple example of how it is possible to isolate object from the scene and find its location.
 
-Just download .cpp file and CMakeLists.txt and build .exe file. 
+Bouding boxes are used to describe orientation and translation of the object. Also bouding boxes can be used to calculate dimension of the objects (width, lenght and height).
 
-Parameters in algoritm are set for resolution 0.004f, so if you have higher resolution feel free to put higher values for iss_detector.setSalientRadius and iss_detector.setNonMaxRadius, also might you'll need change the other parameters for correct result.
+Application works in real time using Kinect v2.
 
-![Blue points are ISS-3D keypoints](https://i.imgur.com/xzk97Tr.jpg)
+Pseudo code:
 
+1. Passthrough, Voxel, Noise removal filtration.
+2. MLS surface reconstruction.
+3. Remove table's surface.
+3. Euclidian cluster extraction.
+4. Integrating bounding box around cluster.
+5. Printout orientation and translation of the object (4x4 matrix).
 
-      
